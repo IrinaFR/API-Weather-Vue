@@ -1,26 +1,39 @@
-<template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+<template lang="pug">
+.page 
+  app-search
+  app-main
+  app-background
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import AppMain from './components/AppMain.vue'
+import AppSearch from './components/AppSearch.vue'
+import AppBackground from './components/AppBackground.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    AppSearch, AppBackground, AppMain
   }
 }
 </script>
 
 <style>
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  color: #fff;
+}
+.page{
+  padding: 50px;
+  box-sizing: border-box;
+  height: 100vh;
+  width: 100vw;
 }
 </style>
