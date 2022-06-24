@@ -11,10 +11,13 @@ import AppSearch from './components/AppSearch.vue'
 import AppBackground from './components/AppBackground.vue'
 
 export default {
-  name: 'App',
-  components: {
-    AppSearch, AppBackground, AppMain
-  }
+	name: 'App',
+	components: {
+		AppSearch, AppBackground, AppMain
+	},
+	created() {
+			this.$store.dispatch('loadWheather')
+	},
 }
 </script>
 
